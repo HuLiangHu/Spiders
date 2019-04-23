@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - novel_rawdata@mysql.crotondata.cn" uuid="7512f4db-33af-4016-bafd-0c479baf4b3f">
+    <database-info product="MySQL" version="5.7.16" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="novel_rawdata"/>
+    <table name="17k_base_point" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="url" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12"/>
+      <column name="siteid" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="author" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="authorid" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="novelid" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="base_point" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="url" unique="false" columns="url"/>
+    </table>
+    <table name="anime_rawdata" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="title" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="author" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="animeid" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="status" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="click_count" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="comment_count" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="recomment_count" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="tags" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="category" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="license_status" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="rating" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="rating_count" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="monthtickets" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="coll_count" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="tucao_count" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="redtickets" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="blacktickets" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="site" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ctime" sqlType="TIMESTAMP" precision="19" scale="0" nullable="true" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="ctime" unique="false" columns="ctime"/>
+      <index name="title" unique="false" columns="title,author"/>
+    </table>
+    <table name="import_novelcategory" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="﻿网站" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="网站类型" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="子类型" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="主类型" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="import_tiebaurl" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="tiebaurl" sqlType="VARCHAR" precision="2048" scale="0" nullable="true" jdbcType="12"/>
+      <column name="tiebaname" sqlType="VARCHAR" precision="64" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="import_weibourl" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="weibourl" sqlType="VARCHAR" precision="2048" scale="0" nullable="true" jdbcType="12"/>
+      <column name="weiboid" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="mapping_author" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="author" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="r3_wb_fans_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5b6u5Y2a57KJ5Lid5pWw"/>
+      <column name="r4_zztb_vip_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5L2c6ICF6LS05ZCndmlw5pWw"/>
+      <column name="r4_zztb_themes_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5L2c6ICF6LS05ZCn5Li76aKY5pWw"/>
+      <column name="r4_zztb_reply_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5L2c6ICF6LS05ZCn5Zue5aSN5pWw"/>
+      <column name="weibo_id" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="weibo_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="weibo_url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="tieba_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="zztb_url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="crawldate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="author" unique="true" columns="author"/>
+      <index name="zztb" unique="false" columns="zztb_url"/>
+    </table>
+    <table name="mapping_novel" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="category_type" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12" def="J25vdmVsJw=="/>
+      <column name="name" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="site" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="author" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="r4_zptb_vip_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5L2c5ZOB6LS05ZCn5Lya5ZGY5pWw"/>
+      <column name="r4_zptb_themes_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5L2c5ZOB6LS05ZCn5Li76aKY5pWw"/>
+      <column name="r4_zptb_reply_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5L2c5ZOB6LS05ZCn5Zue5aSN5pWw"/>
+      <column name="r4_db_reviews_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="6LGG55Oj6ZiF6K+76YeP"/>
+      <column name="site_url" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="douban_url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="doubanid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="tieba_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="zptb_url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="crawldate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="uniq" unique="true" columns="category_type,name,site,author"/>
+      <index name="idx_third_party_data_category_type_name_author" unique="false" columns="category_type,name,author"/>
+      <index name="site_url" unique="false" columns="site_url"/>
+      <index name="zptb_url" unique="false" columns="zptb_url"/>
+    </table>
+    <table name="novel_tops" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="names" sqlType="VARCHAR" precision="128" scale="0" nullable="true" jdbcType="12"/>
+      <column name="url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="site" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="siteid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="author" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="author_weibo" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="author_weibo_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="authorid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="category" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="categoryid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="novelid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="bookid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="book_url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="doubanid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="book_tieba_url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="author_tieba_url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="rawdata" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="author" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="category" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="page_view" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="word_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="description" sqlType="VARCHAR" precision="2000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="points" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="yuepiao" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="shoucang" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="comment_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="review_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="redpack" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="yuepiaoorder" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="flower" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="diamondnum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="coffeenum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="eggnum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="redpackorder" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="isvip" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="status" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="imageurl" sqlType="VARCHAR" precision="2048" scale="0" nullable="true" jdbcType="12"/>
+      <column name="banquan" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="biaoqian" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="haopingzhishu" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="total_recommend" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="totalrenqi" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="printmark" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="hongbao" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="vipvote" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="pubtime" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="lastupdate" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="crawldate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="site" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="uniq_url_date" unique="true" columns="url,crawldate"/>
+      <index name="author" unique="false" columns="author"/>
+      <index name="category" unique="false" columns="category"/>
+      <index name="crawldate" unique="false" columns="crawldate"/>
+      <index name="id" unique="false" columns="id"/>
+      <index name="IDX_PAGE_VIEW" unique="false" columns="page_view"/>
+      <index name="IDX_WORD_COUNT" unique="false" columns="word_count"/>
+      <index name="site" unique="false" columns="site"/>
+      <index name="status" unique="false" columns="status"/>
+    </table>
+    <table name="rawdata_20161011" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="author" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="category" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="page_view" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="word_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="points" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="yuepiao" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="shoucang" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="comment_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="review_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="redpack" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="yuepiaoorder" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="flower" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="diamondnum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="coffeenum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="eggnum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="redpackorder" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="isvip" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="status" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="imageurl" sqlType="VARCHAR" precision="2048" scale="0" nullable="true" jdbcType="12"/>
+      <column name="banquan" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="biaoqian" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="haopingzhishu" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="total_recommend" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="totalrenqi" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="printmark" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="hongbao" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="vipvote" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="lastupdate" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="crawldate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="site" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="uniq_url_date" unique="true" columns="url,crawldate"/>
+      <index name="author" unique="false" columns="author"/>
+      <index name="category" unique="false" columns="category"/>
+      <index name="crawldate" unique="false" columns="crawldate"/>
+      <index name="id" unique="false" columns="id"/>
+      <index name="site" unique="false" columns="site"/>
+      <index name="status" unique="false" columns="status"/>
+    </table>
+    <table name="rawdata_daynewest" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="author" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="category" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="page_view" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="word_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="points" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="yuepiao" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="shoucang" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="comment_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="redpack" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="yuepiaoorder" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="flower" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="diamondnum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="coffeenum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="eggnum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="redpackorder" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="isvip" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="status" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="imageurl" sqlType="VARCHAR" precision="2048" scale="0" nullable="true" jdbcType="12"/>
+      <column name="banquan" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="biaoqian" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="haopingzhishu" sqlType="DECIMAL" precision="5" scale="2" nullable="true" jdbcType="3"/>
+      <column name="total_recommend" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="totalrenqi" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="printmark" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="hongbao" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="vipvote" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="lastupdate" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="crawldate" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="site" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="category" unique="false" columns="category"/>
+      <index name="site" unique="false" columns="site"/>
+      <index name="status" unique="false" columns="status"/>
+      <index name="tbl_rawdata_daynewest_ibfk_1_idx" unique="false" columns="author"/>
+    </table>
+    <table name="third_party_data" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="category_type" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="author" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="r4_zptb_vip_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5L2c5ZOB6LS05ZCndmlw"/>
+      <column name="r4_zptb_themes_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5L2c5ZOB6LS05ZCn5Li76aKY5pWw"/>
+      <column name="r4_zptb_reply_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5L2c5ZOB6LS05ZCn5Zue5aSN5pWw"/>
+      <column name="r4_db_reviews_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="6LGG55Oj6ZiF6K+76YeP"/>
+      <column name="r3_wb_fans_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5b6u5Y2a57KJ5Lid5pWw"/>
+      <column name="r4_zztb_vip_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5L2c6ICF6LS05ZCndmlw5pWw"/>
+      <column name="r4_zztb_themes_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5L2c6ICF6LS05ZCn5Li76aKY5pWw"/>
+      <column name="r4_zztb_reply_number" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" remarks="5L2c6ICF6LS05ZCn5Zue5aSN5pWw"/>
+      <column name="weibo_url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="weiboid" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="douban_url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="doubanid" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="zztb_url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="zptb_url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="idx_third_party_data_category_type_name_author" unique="true" columns="category_type,name,author"/>
+    </table>
+    <table name="tmp_rawdata_newest" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="author" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="category" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="page_view" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="word_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="points" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="yuepiao" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="shoucang" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="comment_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="review_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="redpack" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="yuepiaoorder" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="flower" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="diamondnum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="coffeenum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="eggnum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="redpackorder" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="isvip" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="status" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="imageurl" sqlType="VARCHAR" precision="2048" scale="0" nullable="true" jdbcType="12"/>
+      <column name="banquan" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="biaoqian" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="haopingzhishu" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="total_recommend" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="totalrenqi" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="printmark" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="hongbao" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="vipvote" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="pubtime" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="lastupdate" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="crawldate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="site" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <index name="author" unique="false" columns="author"/>
+      <index name="categoryname" unique="false" columns="category"/>
+      <index name="name" unique="false" columns="name"/>
+      <index name="page_view" unique="false" columns="page_view"/>
+      <index name="site" unique="false" columns="site"/>
+      <index name="status" unique="false" columns="status"/>
+    </table>
+    <table name="tmp_rawdata_newest_his" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="yearmonth" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="author" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="category" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="page_view" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="word_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="description" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="points" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="yuepiao" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="shoucang" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="comment_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="review_count" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="redpack" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="yuepiaoorder" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="flower" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="diamondnum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="coffeenum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="eggnum" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="redpackorder" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="isvip" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="status" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="imageurl" sqlType="VARCHAR" precision="2048" scale="0" nullable="true" jdbcType="12"/>
+      <column name="banquan" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="biaoqian" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="haopingzhishu" sqlType="VARCHAR" precision="45" scale="0" nullable="true" jdbcType="12"/>
+      <column name="total_recommend" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="totalrenqi" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="printmark" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="hongbao" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="vipvote" sqlType="BIGINT" precision="19" scale="0" nullable="true" jdbcType="-5"/>
+      <column name="pubtime" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="lastupdate" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="crawldate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="site" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <index name="author" unique="false" columns="author"/>
+      <index name="categoryname" unique="false" columns="category"/>
+      <index name="name" unique="false" columns="name"/>
+      <index name="page_view" unique="false" columns="page_view"/>
+      <index name="site" unique="false" columns="site"/>
+      <index name="status" unique="false" columns="status"/>
+      <index name="url" unique="false" columns="url"/>
+      <index name="yearmonth" unique="false" columns="yearmonth"/>
+    </table>
+    <table name="userids" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="url" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="id" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="作者微博贴吧" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="﻿作者" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="贴吧名" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="微博ID" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="出版物数据" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="﻿整体排名" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="分类排名" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="作品" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="所属网站" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="频道" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="作者" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="类别" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="字数/话数" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="起更日期" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="作者微博名" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="被开发" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="1.IP.SABC标准评级" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="1.IP.SABC标准评分" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="1.IP.SABC标准位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="1.IP泛粉指数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="1.IP泛粉指数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="2.作品指数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="2.作品指数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="3.出版物指数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="3.出版物指数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="4总销量指数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="4总销量指数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="4.单册最高销量指数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="4.单册最高销量指数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="作品贴吧指数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="作品贴吧指数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="贴吧会员数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="贴吧会员数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="贴吧主题数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="贴吧主题数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="贴吧回复数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="贴吧回复数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="3.豆瓣指数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="3.豆瓣指数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="5.豆瓣总评论人数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="5.豆瓣总评论位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="2.作者指数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="2.作者指数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="3.微博粉丝数" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="3.微博粉丝数指数" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="3.微博粉丝数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="3.作者贴吧指数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="3.作者贴吧指数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="4.贴吧会员数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="4.贴吧会员数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="4.贴吧主题数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="4.贴吧主题数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="4.贴吧回复数数值" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="4.贴吧回复数位置" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="小说类型填充表" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="﻿网站" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="网站类型" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="子类型" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="主类型" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="小说贴吧url" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="﻿作品" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="网站" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="作者" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="类型" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="评级" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="评分" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="URL" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="zptb" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="豆瓣评论人数" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="﻿作品" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="豆瓣评论人数" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <table name="顶级作者新作追踪" schema="" catalog="novel_rawdata" type="TABLE">
+      <column name="﻿作者" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="擅长类型" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="活跃网站" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="作者评级" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="作者指数" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="顶级作品数" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="已被开发作品数" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="新更作品" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="开始时间" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="当前字数" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="当前评级" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+    <procedure name="GET_LEFT_CHUNK" schema="" catalog="novel_rawdata" type="2">
+      <prototype>
+        <parameter name="s" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="p" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="2"/>
+        <parameter name="" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="GET_LEFT_DELIMITER" schema="" catalog="novel_rawdata" type="2">
+      <prototype>
+        <parameter name="s" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="p" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="2"/>
+        <parameter name="" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="GET_MAX_REPEAT_SPLIT" schema="" catalog="novel_rawdata" type="2">
+      <prototype>
+        <parameter name="str" sqlType="VARCHAR" precision="4000" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="delim" sqlType="CHAR" precision="10" scale="0" nullable="true" jdbcType="1" type="1" index="2"/>
+        <parameter name="" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="GET_RIGHT_DELIMITER" schema="" catalog="novel_rawdata" type="2">
+      <prototype>
+        <parameter name="s" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="p" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="2"/>
+        <parameter name="" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="REGEXP_REPLACE" schema="" catalog="novel_rawdata" type="2">
+      <prototype>
+        <parameter name="s" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="p" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="2"/>
+        <parameter name="r" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="3"/>
+        <parameter name="" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="REGEXP_SPLIT" schema="" catalog="novel_rawdata" type="1">
+      <prototype>
+        <parameter name="" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="0"/>
+        <parameter name="s" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="s" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="p" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="2"/>
+        <parameter name="p" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="2"/>
+        <parameter name="j" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="3"/>
+        <parameter name="d" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" type="1" index="3"/>
+        <parameter name="d" sqlType="TINYINT" precision="3" scale="0" nullable="true" jdbcType="-6" type="1" index="4"/>
+      </prototype>
+    </procedure>
+    <procedure name="SPLIT_STR" schema="" catalog="novel_rawdata" type="2">
+      <prototype>
+        <parameter name="x" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="delim" sqlType="VARCHAR" precision="12" scale="0" nullable="true" jdbcType="12" type="1" index="2"/>
+        <parameter name="pos" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="3"/>
+        <parameter name="" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="SUBSTR_COUNT" schema="" catalog="novel_rawdata" type="2">
+      <prototype>
+        <parameter name="_delimiter" sqlType="VARCHAR" precision="12" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="_value" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12" type="1" index="2"/>
+        <parameter name="" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="5" index="0"/>
+      </prototype>
+    </procedure>
+    <procedure name="etl_gcr_novels" schema="" catalog="novel_rawdata" type="1">
+      <prototype>
+        <parameter name="cdate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91" type="1" index="1"/>
+        <parameter name="_year" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="2"/>
+        <parameter name="_month" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="3"/>
+        <parameter name="_preyear" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="4"/>
+        <parameter name="_premonth" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="5"/>
+        <parameter name="debug_step" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="6"/>
+      </prototype>
+    </procedure>
+    <procedure name="etl_gcr_novels_checkbymapping" schema="" catalog="novel_rawdata" type="1">
+      <prototype>
+        <parameter name="cdate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91" type="1" index="1"/>
+      </prototype>
+    </procedure>
+    <procedure name="etl_gcr_novels_checkbysite" schema="" catalog="novel_rawdata" type="1">
+      <prototype>
+        <parameter name="cdate" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" type="1" index="1"/>
+        <parameter name="compareyearmonth" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="2"/>
+        <parameter name="website" sqlType="VARCHAR" precision="20" scale="0" nullable="true" jdbcType="12" type="1" index="3"/>
+      </prototype>
+    </procedure>
+    <procedure name="etl_gcr_publishs" schema="" catalog="novel_rawdata" type="1">
+      <prototype>
+        <parameter name="_year" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="1"/>
+        <parameter name="_month" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="2"/>
+        <parameter name="debug_step" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" type="1" index="3"/>
+      </prototype>
+    </procedure>
+    <procedure name="etl_novels" schema="" catalog="novel_rawdata" type="1">
+      <prototype>
+        <parameter name="startdate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91" type="1" index="1"/>
+        <parameter name="enddate" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91" type="1" index="2"/>
+      </prototype>
+    </procedure>
+    <procedure name="etl_topauthors" schema="" catalog="novel_rawdata" type="1"/>
+    <procedure name="import_category_mappings" schema="" catalog="novel_rawdata" type="1"/>
+    <procedure name="import_novel_author_mapping" schema="" catalog="novel_rawdata" type="1"/>
+    <procedure name="import_weibo_tieba" schema="" catalog="novel_rawdata" type="1">
+      <prototype>
+        <parameter name="_day" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91" type="1" index="1"/>
+      </prototype>
+    </procedure>
+    <procedure name="import_weibo_tieba_toqueue" schema="" catalog="novel_rawdata" type="1"/>
+    <procedure name="insert_rawdata_newest" schema="" catalog="novel_rawdata" type="1"/>
+    <procedure name="new_procedure" schema="" catalog="novel_rawdata" type="1"/>
+    <procedure name="url_decode" schema="" catalog="novel_rawdata" type="2">
+      <prototype>
+        <parameter name="original_text" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1" type="1" index="1"/>
+        <parameter name="" sqlType="TEXT CHARSET UTF8" precision="65535" scale="0" nullable="true" jdbcType="1111" type="5" index="0"/>
+      </prototype>
+    </procedure>
+  </data-source>
+</component>

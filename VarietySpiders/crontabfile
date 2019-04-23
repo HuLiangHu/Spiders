@@ -1,0 +1,1 @@
+10 0 * * * cd /home/spiders &&  python /home/spiders/run.py cron >> /var/log/cron.log 2>&1

@@ -1,0 +1,23 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: movieplaycountspider
+  namespace: spiders
+spec:
+  schedule: "35 1 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: movieplaycountspider
+            image: registry-vpc.cn-hangzhou.aliyuncs.com/crotondata/movieplaycountspider:latest
+            env:
+            - name: LOG_LEVEL
+              value: ERROR
+            envFrom:
+            - secretRef:
+                name: mysql-spider-media
+          restartPolicy: OnFailure
+          imagePullSecrets:
+          - name: registrysecret

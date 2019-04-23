@@ -1,0 +1,6 @@
+pymysql
+lxml
+requests
+FontTools
+selenium
+pyexecjs

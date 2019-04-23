@@ -1,0 +1,7 @@
+scrapy-redis
+pymysql
+lxml
+pymongo
+scrapy
+requests
+pyexecjs

@@ -1,0 +1,4 @@
+scrapy
+pymysql
+pymongo
+requests

@@ -1,0 +1,4 @@
+scrapy
+redis
+pymysql
+python-dateutil

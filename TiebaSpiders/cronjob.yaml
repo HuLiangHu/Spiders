@@ -1,0 +1,23 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: tiebaspider
+  namespace: spiders
+spec:
+  schedule: "10 18 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: tiebaspider
+            image: registry-vpc.cn-hangzhou.aliyuncs.com/croton/spiders:tieba
+            env:
+            - name: LOG_LEVEL
+              value: ERROR
+            envFrom:
+            - secretRef:
+                name: mysql-spider
+          restartPolicy: OnFailure
+          imagePullSecrets:
+          - name: registrysecret

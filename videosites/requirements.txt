@@ -1,0 +1,4 @@
+--extra-index-url http://pypi.crotondata.cn
+scrapy-utils
+pymysql
+redis
